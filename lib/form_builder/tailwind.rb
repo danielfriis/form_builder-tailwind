@@ -7,3 +7,12 @@ module FormBuilder
     # Additional setup or configuration can go here if needed in the future.
   end
 end
+
+# Reopen ActionView::Helpers::FormBuilder and include the Tailwind module
+module ActionView
+  module Helpers
+    class FormBuilder
+      include ::FormBuilder::Tailwind
+    end
+  end
+end
