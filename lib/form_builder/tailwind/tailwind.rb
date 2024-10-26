@@ -38,7 +38,7 @@ module FormBuilder
       end
 
       def select(attribute, choices, opts = {}, html_opts = {})
-        default_class = "mt-1 block w-full px-3 py-2 rounded-md border-gray-200 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+        default_class = "mt-1 block w-full px-3 py-2 pr-10 rounded-md border-gray-200 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
         error_class = "border-2 border-red-500" if @object&.is_a?(ActiveModel::Model) && @object&.errors&.any?
 
         default_html_opts = {class: "#{default_class} #{error_class}"}
