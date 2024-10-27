@@ -1,6 +1,6 @@
 # FormBuilder Tailwind
 
-Easily add Tailwind styles to your forms.
+Easily add Tailwind styles to your forms using the `FormBuilder::Tailwind` builder.
 
 ## Usage
 
