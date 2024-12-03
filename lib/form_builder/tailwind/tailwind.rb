@@ -24,7 +24,10 @@ module FormBuilder
 
         @template.content_tag(:div, class: "mb-4") do
           field_content = send(field_type, attribute, merged_opts.merge(processed: true))
-          opts[:hide_label] ? field_content : label(attribute) + field_content
+
+          label_text = opts[:label].nil? ? attribute.to_s.humanize : opts[:label]
+          label_text = nil if opts[:label] == false
+          label_text ? label(attribute, label_text) + field_content : field_content
         end
       end
 
