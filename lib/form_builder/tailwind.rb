@@ -30,9 +30,8 @@ module FormBuilder
       end
     end
 
-    # Run the check when the module is included
-    if defined?(Rails) && Rails.application
-      Rails.application.config.to_prepare do
+    class Railtie < Rails::Railtie
+      initializer 'form_builder.tailwind.check_config' do
         ConfigurationChecker.check_tailwind_config
       end
     end
