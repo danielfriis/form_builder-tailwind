@@ -31,7 +31,7 @@ module FormBuilder
     end
 
     # Run the check when the module is included
-    if defined?(Rails)
+    if defined?(Rails) && Rails.application
       Rails.application.config.to_prepare do
         ConfigurationChecker.check_tailwind_config
       end
