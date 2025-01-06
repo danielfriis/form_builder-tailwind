@@ -2,6 +2,18 @@
 
 Easily add Tailwind styles to your forms using the `FormBuilder::Tailwind` builder.
 
+## Installation
+
+```sh
+gem install form_builder-tailwind
+```
+
+Generate the default theme:
+
+```sh
+rails generate form_builder:tailwind:theme
+```
+
 ## Usage
 
 ```erb
